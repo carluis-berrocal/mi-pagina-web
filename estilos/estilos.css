@@ -463,6 +463,9 @@ html {
 nav.celular {
     display: none;
 }
+nav.celular.active {
+    display: block;
+}
 
 @media (max-width:1270px) {
     .menu-icon {
