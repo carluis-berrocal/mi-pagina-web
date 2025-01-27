@@ -6,16 +6,16 @@
 
     <link rel="icon" type="image/ico" href="imagenes/titulo.png">
     <link rel="stylesheet" href="estilos/estilos.css">
-    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="owl/owl.carousel.min.css">
-    <link rel="stylesheet" href="owl/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&display=swap">
+    <link rel="stylesheet" href="estilos/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="estilos/owl/owl.theme.default.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <meta name="keywords" content="diseñador de páginas web, programador web, paginas web">
     <meta name="description" content="Diseñador de páginas web, funcionales, rápidas y adaptables a todos los dispositivos.">
-    <meta name="author" content="carluisberrocal.000webhostapp.com">
+    <meta name="author" content="https://carluisberrocal.netlify.app">
     <meta name="owner" content="Carluis Berrocal">
 </head>
 <body>
@@ -134,15 +134,15 @@
             <h3>Mis Trabajos</h3>
             <div class="owl-carousel owl-theme">
                 <div class="item">
-                    <a href="https://carluisberrocal.000webhostapp.com/" target="_blank">
+                    <a href="https://www.genomapi.com/genoma" target="_blank">
                         <img loading="lazy" src="imagenes/carluis.png">
-                        <p>Carluis Berrocal</p>
+                        <p>Genoma</p>
                     </a>
                 </div>
                 <div class="item">
-                    <a href="http://www.rentabyte.com/" target="_blank">
+                    <a href="https://mdipos.gesyco.co/" target="_blank">
                         <img loading="lazy" loading="lazy" src="imagenes/rentabyte.png">
-                        <p>Rentabyte</p>
+                        <p>Punto de Venta</p>
                     </a>
                 </div>
                 <div class="item">
@@ -152,9 +152,9 @@
                     </a>
                 </div>
                 <div class="item">
-                    <a href="https://carluisberrocal.000webhostapp.com/" target="_blank">
+                    <a href="https://carluisberrocal.netlify.app/" target="_blank">
                         <img loading="lazy"  loading="lazy" src="imagenes/fotomor.png">
-                        <p>Fotomor</p>
+                        <p>Carluis Berrocal</p>
                     </a>
                 </div>
             </div>
@@ -246,131 +246,11 @@
     <!-- scripts -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="owl/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="js/owl/owl.carousel.min.js"></script>
     <script src="js/particles.min.js"></script>
     <script src="js/app.js"></script>
     <script src="js/wow.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    
-    <script>
-        
-        $(document).ready(function() {
-            new WOW().init();
-            $('.owl-carousel').owlCarousel({
-                loop:true,
-                margin:10,
-                nav:true,
-                dots:false,
-                autoplay:true,
-                autoplayHoverPause:true,
-                autoplayTimeout:3000,
-                responsive:{
-                    0:{
-                        items:1
-                    },
-                    600:{
-                        items:3
-                    },
-                    1000:{
-                        items:4
-                    }
-                }
-            });
-        
-            $(window).scroll(function() {
-                var scroll = $(window).scrollTop();
-                if (scroll > 100) {
-                    $('.menu').css({
-                        "position": "fixed",
-                        "width": "100%",
-                        "top": "0",
-                        "background": "#fff",
-                        "box-shadow": "rgba(0, 0, 0, 0.22) 6px 1px 1px",
-                        "z-index": "100"
-                    });
-                    $('.menu a').css("color", "#000");
-                    $('nav.celular a').css("color", "#fff");
-                    $('.logo').css("color", "#000");
-                    $(".menu a").hover(function() {
-                        $(this).css("color", "#6171e2e6");
-                    }, function() {
-                        $(this).css("color", "#000");
-                    });
-                } else {
-                    $('.menu').css({
-                        "position": "relative",
-                        "background": "transparent",
-                        "box-shadow": "0 0 0"
-                    });
-                    $('.menu a').css("color", "#fff");
-                    $('nav.celular a').css("color", "#fff");
-                    $('.logo').css("color", "#fff");
-                    $(".menu a").hover(function() {
-                        $(this).css("color", "#56b2f9e0");
-                    }, function() {
-                        $(this).css("color", "#fff");
-                    });
-                }
-            });
-        
-            $('.menu-icon').click(function() {
-                $('header nav.celular').slideToggle();
-            });
-        
-            $('.menu a').click(function() {
-                $('header nav.celular').slideUp();
-            });
-        
-            
-        });
-
-        // Enviar correo
-        // Clave codificada y dividida en partes
-        const part1 = 'STJWRHo1'; // Parte 1 de la clave codificada en Base64
-        const part2 = 'eVBYOUFv'; // Parte 2 de la clave codificada en Base64
-        const part3 = 'clNtTkM='; // Parte 3 de la clave codificada en Base64
-        const encodedKey = `${part1}${part2}${part3}`; // Reunir las partes
-
-        // Inicializar EmailJS con la clave decodificada
-        emailjs.init(atob(encodedKey));
-
-        // Elementos del DOM
-        const btn = document.getElementById('enviar_form');
-        const formulario = document.getElementById('formulario-contacto');
-
-        // Evento de envío del formulario
-        formulario.addEventListener('submit', function (e) {
-            e.preventDefault(); // Prevenir el envío por defecto
-
-            btn.value = 'Enviando...';
-
-            const serviceID = 'default_service'; // ID del servicio
-            const templateID = 'template_gfoncad'; // ID de la plantilla
-
-            // Enviar el formulario usando EmailJS
-            emailjs.sendForm(serviceID, templateID, this)
-                .then(() => {
-                    btn.value = 'Enviar';
-                    formulario.reset(); // Resetear el formulario
-                    // Mostrar mensaje de éxito usando SweetAlert2
-                    Swal.fire({
-                        title: "¡Correo Enviado!",
-                        html: "El correo se envió correctamente.<br>Gracias por escribirnos,<br>nos pondremos en contacto a la brevedad.",
-                        icon: "success",
-                    });
-                })
-                .catch((err) => {
-                    btn.value = 'Enviar';
-                    // Mostrar mensaje de error usando SweetAlert2
-                    Swal.fire({
-                        title: "Error",
-                        text: "Ocurrió un error al enviar el correo: " + err.text,
-                        icon: "error"
-                    });
-                });
-        });
-
-    </script>
-
+    <script src="js/main.js"></script>
 </body>
 </html>
