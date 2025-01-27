@@ -18,7 +18,7 @@ Soy desarrollador web con experiencia en **PHP (Laravel)**, **JavaScript (jQuery
 - **Backend**: No aplica en este proyecto, ya que está construido únicamente con tecnologías del lado del cliente.
 
 ## 📂 Estructura del Proyecto
-plaintext
+
 ├── index.html        # Página principal
 ├── css/
 │   ├── style.css     # Estilos principales
