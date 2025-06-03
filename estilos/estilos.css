@@ -183,6 +183,25 @@ h3 {
     margin-right: 8px;
 }
 
+.contact-inline {
+  all: unset !important; /* Elimina todos los estilos heredados, incluso padding y fondo */
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer !important;
+  color: inherit;
+  text-decoration: none;
+}
+
+.contact-inline:hover {
+  text-decoration: underline !important;
+}
+
+.contact-inline i {
+  font-size: 0.9rem;
+}
+
+
 /* SECCION SERVICIOS */
 
 .contenedor-servicios {
