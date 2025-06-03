@@ -5,8 +5,8 @@ const ARCHIVOS_A_CACHEAR = [
   '/js/main.js',
   '/js/app.js',
   '/estilos/estilos.css',
-  '/imagenes/pwa/icon-192.png',
-  '/imagenes/pwa/icon-512.png',
+  '/imagenes/pwa/ios/192.png',
+  '/imagenes/pwa/ios/512.png',
   '/manifest.json',
   '/offline.html',
 ];
