@@ -140,13 +140,23 @@ h3 {
 
 #sobre-mi .contenedor-sobremi {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center; /* Centra verticalmente */
+    justify-content: space-around; /* Centra horizontalmente si hay espacio */
+    gap: 2rem; /* Espacio entre imagen y texto */
 }
 
 #sobre-mi .computadoras {
     background: #fff;
     transition: 0.2s;
 }
+.computadoras img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1.5rem; /* Bordes redondeados */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra suave opcional */
+}
+
 
 #sobre-mi .computadoras:hover {
     transform: scale(1.05);
@@ -157,10 +167,10 @@ h3 {
     background: #fff;
 }
 
-.texto.zoom:hover {
+/* .texto.zoom:hover {
     font-size: 17px;
     text-align: justify;
-}
+} */
 
 .tecnologias {
     list-style: none;

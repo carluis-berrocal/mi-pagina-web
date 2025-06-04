@@ -1,12 +1,12 @@
-const CACHE_NAME = 'mi-portafolio-cache-v1';
+const CACHE_NAME = 'mi-portafolio-cache-v2';
 const ARCHIVOS_A_CACHEAR = [
   '/',
   '/index.html',
   '/js/main.js',
   '/js/app.js',
   '/estilos/estilos.css',
-  '/imagenes/pwa/ios/192.png',
-  '/imagenes/pwa/ios/512.png',
+  '/imagenes/pwa/192.png',
+  '/imagenes/pwa/512.png',
   '/manifest.json',
   '/offline.html',
 ];
