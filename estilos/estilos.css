@@ -130,6 +130,35 @@ nav ul li a {
     padding-top: 20px;
 }
 
+/* estilos para los iconos de repositorios y hoja de vida */
+.iconos {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  
+}
+
+.icono {
+    background: none !important;
+    border: none;
+    padding: 0;
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+.icono:hover {
+    transform: scale(1.2);
+}
+
+.icono img {
+    width: 70px;
+    height: 70px;
+    border-radius: 20%;
+    transition: transform 0.3s;
+}
+
+
+
 /* SECCION DE SOBRE MI */
 
 h3 {
